@@ -27,12 +27,14 @@ tooltip label{
 
 #workspaces button {
     padding: 5px;
-    color: #313244;
+    color: #89b4fa;
     margin-right: 5px;
 }
 
 #workspaces button.active {
     color: #a6adc8;
+	border-radius: 10px;
+    background: black;
 }
 
 #workspaces button.focused {
@@ -61,7 +63,6 @@ tooltip label{
 #custom-weather,
 #window,
 #cpu,
-#disk,
 #custom-updates,
 #memory,
 #clock,
@@ -84,11 +85,16 @@ tooltip label{
     border-radius: 10px;
 }
 
-#tray, #custom-lock_screen, #temperature, #backlight, #custom-launch_wofi, #cpu {
+#tray {
+	border-radius: 10px;
+	margin-right: 10px;
+}
+
+#custom-lock_screen, #temperature, #backlight, #custom-launch_wofi, #cpu {
     border-radius: 10px 0px 0px 10px;
 }
 
-#custom-light_dark, #custom-power_btn, #workspaces, #pulseaudio.microphone, #battery, #disk {
+#custom-light_dark, #custom-power_btn, #workspaces, #pulseaudio.microphone, #battery, #memory {
     border-radius: 0px 10px 10px 0px;
     margin-right: 10px;
 }

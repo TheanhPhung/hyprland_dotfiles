@@ -4,9 +4,8 @@
     "mod": "dock",
     "exclusive": true,
     "passthrough": false,
-    "gtk-layer-shell": true,
     "height": 50,
-    "modules-left": ["custom/launch_wofi","hyprland/workspaces","cpu","memory","disk","hyprland/window"],
+    "modules-left": ["custom/launch_wofi","hyprland/workspaces","cpu","memory","hyprland/window"],
     "modules-center": ["clock"],
     "modules-right": ["temperature","battery","backlight","pulseaudio","pulseaudio#microphone","tray","custom/lock_screen","custom/power_btn"],
     
@@ -16,7 +15,7 @@
 
     "custom/launch_wofi": {
         "format": "",
-        "on-click": "pkill wofi; wofi -n",
+        "on-click": "pkill wofi; wofi --show drun",
         "tooltip": false
     },
 
@@ -39,15 +38,6 @@
         "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
     },
 
-    "disk": {
-        "interval": 30,
-        "format": "󰋊 {percentage_used}%",
-        "path": "/",
-        "tooltip": true,
-        "tooltip-format": "HDD - {used} used out of {total} on {path} ({percentage_used}%)",
-        "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
-    },
-
     "memory": {
         "interval": 30,
         "format": " {}%",
@@ -64,9 +54,9 @@
         "persistent-workspaces": {
             "1": [],
             "2": [],
-            "3": [],
-            "4": [],
-            "5": []
+            "3": []
+            //"4": [],
+            //"5": []
         }
     },
     
@@ -77,7 +67,8 @@
 
     "clock": {
         "format": "{:%I:%M %p -  %A %B %e %Y}",
-        "tooltip": true
+        "tooltip": true,
+		"on-click": "sololeveling"
     },
 
     "backlight": {
